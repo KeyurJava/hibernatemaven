@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+     <!--  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+      <property name="hibernate.connection.url">jdbc:mysql://localhost/hibernatetutorial</property>
+      <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+       -->
+       <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>	
+      <property name="hibernate.connection.username">root</property>
+      <property name="hibernate.connection.password">root</property>
+      <property name="hibernate.connection.pool_size">10</property>
+      <property name="show_sql">true</property>
+      <property name="connection.autocommit">true</property>
+      <property name="dialect">org.hibernate.dialect.OracleDialect</property>
+      <mapping class="com.nihilent.wicket.entity.User"/>
+      
+      <!-- 
+      <mapping class="com.nihilent.training.EmployeeOneToMany"/>
+      <mapping class="com.nihilent.training.DepartmentOneToMany"/>
+      <mapping class="com.nihilent.training.Employee"/>
+      <mapping class="com.nihilent.training.Department"/>
+      
+      
+        
+      <mapping class="com.nihilent.training.Student"/>
+      <mapping class="com.nihilent.training.Meeting"/>
+      <mapping class="com.nihilent.training.User"/>
+      <mapping class="com.nihilent.training.UserAddress"/>
+      <mapping class="com.nihilent.training.UserAddressCollection"/>
+      <mapping class="com.nihilent.training.Contact"/>
+      <mapping class="com.nihilent.training.User"/>
+      <mapping class="com.nihilent.training.Item"/>
+      <mapping class="com.nihilent.training.ItemImage"/>
+      <mapping class="com.nihilent.training.UserAddressCollectionPrimaryKey"/>
+      
+      <mapping class="com.nihilent.training.UserAddress"/>
+      <mapping class="com.nihilent.training.ItemBid"/>
+      <mapping class="com.nihilent.training.Bid"/>
+      <mapping class="com.nihilent.training.Employee"/>
+      <mapping class="com.nihilent.training.Department"/>
+      
+      <mapping class="com.nihilent.training.inheritance.EmployeeTablePerHeirchy"/>
+      <mapping class="com.nihilent.training.inheritance.PersonTablePerHeirchy"/>
+      
+      <mapping class="com.nihilent.training.inheritance.EmployeeTablePerSubClass"/>
+      <mapping class="com.nihilent.training.inheritance.OwnerTablePerSubClass"/>
+      <mapping class="com.nihilent.training.inheritance.PersonTablePerSubClass"/>
+      
+      <mapping class="com.nihilent.training.inheritance.EmployeeTablePerConcreteClass"/>
+      <mapping class="com.nihilent.training.inheritance.OwnerTablePerConcreteClass"/>
+      <mapping class="com.nihilent.training.inheritance.PersonTablePerConcreteClass"/> 
+      
+      -->
+</session-factory>
+</hibernate-configuration>
